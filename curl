@@ -1,0 +1,7 @@
+  ------------------
+| cURL : cheat sheet |
+  ------------------
+
+MEDIR TIEMPOS DE RESPUESTA
+xxxxxxxxxxxxxxxxxxxxxxxxxx
+curl --write-out curl --write-out '%{time_total}' --output /dev/null --silent "URL"
