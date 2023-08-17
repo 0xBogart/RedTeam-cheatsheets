@@ -1,0 +1,21 @@
+# EVASIÓN DE FIREWALL\IDS
+
+nmap -sS -sV -p- -T2 -f -D RND:10 --randomize-hosts <target>
+
+-sS: TCP SYN Scan para utilizar el escaneo SYN Stealth.
+-sV: Detección de versiones de servicios.
+-p-: Escaneo de todos los puertos.
+-T4: Configuración del tiempo de espera y velocidad del escaneo.
+-f: Fragmentación de paquetes para evadir sistemas de detección de intrusos (IDS) y firewalls.
+-D RND:10: Spoofing de dirección IP con un conjunto aleatorio de direcciones IP de origen para dificultar el rastreo.
+--randomize-hosts: Orden aleatorio de los hosts para dificultar el perfilado de tráfico.
+
+-------------
+nmap -sT -f -T2 -D RND:10 --data-length 20 --randomize-hosts <target>
+
+-sT: Escaneo TCP Connect, establece una conexión completa con los puertos objetivo.
+-f: Fragmentación de paquetes para evadir sistemas de detección de intrusos (IDS) y firewalls.
+-T2: Configuración de tiempo de espera y velocidad de escaneo a un nivel más bajo para minimizar la detección.
+-D RND:10: Spoofing de dirección IP con un conjunto aleatorio de 10 direcciones IP de origen.
+--data-length 20: Agrega carga útil personalizada a los paquetes para dificultar aún más la detección.
+--randomize-hosts: Orden aleatorio de los hosts para dificultar el perfilado de tráfico.
