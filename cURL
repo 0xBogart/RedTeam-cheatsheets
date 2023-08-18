@@ -1,6 +1,6 @@
-   ::::
-:_ cURL _:
-   ::::
+  ::::
+_ cURL _
+  ::::
 
-::.MEDIR TIEMPOS DE RESPUESTA.::
-curl --write-out '%{time_total}' --output /dev/null -s "https://target"
+::.Medir Tiempos de Respuesta.::
+curl --write-out '%{time_total}' --output /dev/null -s "http://127.0.0.1/?Search=item"
