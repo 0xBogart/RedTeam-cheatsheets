@@ -8,8 +8,6 @@ nmap -sS --scan-delay 8000ms <target>
 ::.Escaneo de Puertos TCP Aleatorios y con retardo para romper detección de patrones.::
 nmap --randomize-hosts -T2 --scan-delay 8000ms -p [puertos] <target>
 
-nmap -sU -Pn -p [puertos] --source-port [puerto falsificado] <target>
-
 ::.Escaneo Exhaustivo y Evasivo de Puertos con Fragmentación y Decoys.::
 nmap -sS -sV -p- -T2 -f -D RND:10 <target>
 
@@ -23,7 +21,10 @@ nmap -sS -p- --max-parallelism 500 -f -D decoy1,decoy2,decoy3 <target>
 nmap -sS -Pn -p [puertos] --data-length [tamaño] --data "GET / HTTP/1.1\r\nHost: target.com\r\n\r\n" <target>
 
 ::.Escaneo de Puertos UDP Falsificando el Puerto de Origen.::
-nmap -sU -Pn --source-port [puerto falsificado] -T2 <target>
+nmap -sU -Pn --source-port [puerto falsificado] -p [puertos] -T2 <target>
 
 ::..Dividir el rango de puertos UDP en dos grupos para evadir la detección.::
 nmap -sU -Pn -p 1-100,[puertos altos] -T2 <target>
+
+::.Scanning de puertos UDP con paquetes falsificados.::
+nmap -sU -Pn -p [puertos] --source-port [puerto falsificado] <target>
