@@ -26,5 +26,5 @@ nmap -sU -Pn --source-port [puerto falsificado] -p [puertos] -T2 <target>
 ::..Dividir el rango de puertos UDP en dos grupos para evadir la detección.::
 nmap -sU -Pn -p 1-100,[puertos altos] -T2 <target>
 
-::.Scanning de puertos UDP con paquetes falsificados.::
+::.Escaneo de puertos UDP con paquetes falsificados.::
 nmap -sU -Pn -p [puertos] --source-port [puerto falsificado] <target>
