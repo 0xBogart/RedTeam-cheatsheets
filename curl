@@ -1,6 +1,6 @@
-  ------------------
-| cURL : cheat sheet |
-  ------------------
+   ::::
+:_ cURL _:
+   ::::
 
-:x: MEDIR TIEMPOS DE RESPUESTA :x:
-curl --write-out '%{time_total}' --output /dev/null --silent "https://domain"
+::.MEDIR TIEMPOS DE RESPUESTA.::
+curl --write-out '%{time_total}' --output /dev/null -s "https://target"
