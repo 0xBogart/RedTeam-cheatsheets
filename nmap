@@ -23,7 +23,7 @@ nmap -sS -Pn -p [puertos] --data-length [tamaño] --data "GET / HTTP/1.1\r\nHost
 ::.Escaneo de Puertos UDP Falsificando el Puerto de Origen.::
 nmap -sU -Pn --source-port [puerto falsificado] -p [puertos] -T2 <target>
 
-::..Dividir el rango de puertos UDP en dos grupos para evadir la detección.::
+::..Escaneo con división del rango de puertos UDP en dos grupos para evadir la detección.::
 nmap -sU -Pn -p 1-100,[puertos altos] -T2 <target>
 
 ::.Escaneo de puertos UDP con paquetes falsificados.::
