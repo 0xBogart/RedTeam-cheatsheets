@@ -1,4 +1,11 @@
 
+'||''|.                                       .|'''.|  '||              '||  '||  
+ ||   ||   ...   ... ... ...   ....  ... ..   ||..  '   || ..     ....   ||   ||  
+ ||...|' .|  '|.  ||  ||  |  .|...||  ||' ''   ''|||.   ||' ||  .|...||  ||   ||  
+ ||      ||   ||   ||| |||   ||       ||     .     '||  ||  ||  ||       ||   ||  
+.||.      '|..|'    |   |     '|...' .||.    |'....|'  .||. ||.  '|...' .||. .||. 
+
+
 :.. Añadir Regla TCP Habilitada al FireWall ..:
 New-NetFirewallRule -DisplayName "Nombre del Programa" -Direction Inbound -Action Allow -Program "C:\program files\Programa\Programa.exe" -Enabled True -Profile Private -Protocol TCP
 
