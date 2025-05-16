@@ -30,7 +30,7 @@ nmap -sS -p- --max-parallelism 500 -f -D decoy1,decoy2,decoy3 <target>
 
 
 ::.Escaneo con datos personalizados en los paquetes para Evadir Firmas IDS.::
-nmap -sS -Pn -p [puertos] --data-length [tamaño] --data "GET / HTTP/1.1\r\nHost: target.com\r\n\r\n" <target>
+nmap -sS -Pn -p [puertos] --data-length [tamaño] --data "GET / HTTP/1.1\r\nHost: <target>\r\n\r\n" <target>
 
 
 ::.Escaneo de Puertos UDP Falsificando el Puerto de Origen.::
